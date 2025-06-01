@@ -24,3 +24,10 @@ for x1 in '01':
                                                                                     c = c + 1
 print(c)
     
+    
+ip = list(map(int, '98.81.154.195 '.split('.')))
+print(f'{bin(ip[0])[2:].zfill(8)}.{bin(ip[1])[2:].zfill(8)}.{bin(ip[2])[2:].zfill(8)}.{bin(ip[3])[2:].zfill(8)}')
+
+
+ip = list(map(int, '255.252.0.0'.split('.')))
+print(f'{bin(ip[0])[2:].zfill(8)}.{bin(ip[1])[2:].zfill(8)}.{bin(ip[2])[2:].zfill(8)}.{bin(ip[3])[2:].zfill(8)}')
