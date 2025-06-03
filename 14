@@ -1,3 +1,5 @@
+; print(sorted('QWERTYUIOPASDFGHJKLZXCVBNM')) -> весь алфавит
+
 ; 10    -> любую CC (while)
 ; любой -> 10       (int)
 
