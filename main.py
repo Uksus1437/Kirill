@@ -1,30 +1,15 @@
-"""Григорий составляет буквенные последовательности путем 
-перестановки букв из слова НОСОЧЕЧКИ.
+# ((x ∧ y) ∨ (y ∧ z)) ≡ ((x → w) ∧ (w → z))        -> 1
 
-Сколько различных последовательностей может составить Григорий, 
-если известно, что гласные и согласные буквы чередуются?
+# ∧ - and
+# ∨ - or
+# → - <=
+# ≡ - ==
+# ¬ - not
 
-две гласные и две согласные не должны стоять рядом
-"""
-
-k = 0
-c = 0
-for x1 in "НСОЕЧКИ":
-    for x2 in "НСОЕЧКИ":
-        for x3 in "НСОЕЧКИ":
-            for x4 in "НСОЕЧКИ":
-                for x5 in "НСОЕЧКИ":
-                    for x6 in "НСОЕЧКИ":
-                        for x7 in "НСОЕЧКИ":
-                            for x8 in "НСОЕЧКИ":
-                                for x9 in "НСОЕЧКИ":
-                                    w = x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + x9
-                                    if w.count('Н') ==1  and w.count('С') ==1  and w.count('О') ==2  and w.count('Е') ==1  and w.count('Ч') ==2  and w.count('К') ==1  and w.count('И') ==1:
-                                        w=w.replace('С','Н')
-                                        w=w.replace('Ч','Н')
-                                        w=w.replace('К','Н')
-                                        w=w.replace('Е','О')
-                                        w=w.replace('И','О')
-                                        if w.count("НН")==0 and w.count('ОО')==0:
-                                            c=c+1
-print(c)
+print("x y z w")
+for x in range(0, 2):
+    for y in range(0, 2):
+        for z in range(0, 2):
+            for w in range(0, 2):
+                if (w <= y) and (not(y) == x) and (x or z):
+                    print(x, y, z, w)
