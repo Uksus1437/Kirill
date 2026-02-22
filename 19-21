@@ -69,7 +69,6 @@ def f(s, h):
         return 0
     if s >= 42 and h < 3:
         return 0
-    
     if (h + 1) % 2 == 0:
         return f(s + 1, h + 1) and f(s + 5, h + 1) and f(s * 3, h + 1)
     else:
