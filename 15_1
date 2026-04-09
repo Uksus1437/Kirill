@@ -54,3 +54,7 @@ def f(a):
 for a in range(1,1000):
     if f(a)==True:
         print(a)
+        
+
+
+
