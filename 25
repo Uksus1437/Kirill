@@ -17,3 +17,20 @@ for n in range(700000+1,10**9):
         break
 print(a)
 print(b)
+
+
+def f(n):
+    a=[]
+    for x in range(2,int(n**0.5)+1):
+        if n%x==0:
+            a+=[x,n//x]
+    a=list(set(a))
+    return a
+for n in range(4_333_795+1,10**10):
+    if n%10!=9:
+        s=sum(f(n))
+        b=([y for y in f(n) if len(f(y))==0])
+        k=len(b)
+        if n-s-k>0 and (n-s-k)%100==29:
+            print(n,f(n),b,k,n-s-k)
+            input()
